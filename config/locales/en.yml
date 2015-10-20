@@ -28,6 +28,10 @@ en:
       help: "Help"
       setting: "Setting"
       login: "Login"
+      profile: "Profile"
+      setting: "Setting"
+      logout: "Logout"
+      account: "Account"
     footer:
       about: "About"
       contact: "Contact"
@@ -39,3 +43,23 @@ en:
     help:
       email: "learning@gmail.com"
       help: "Help"
+  users:
+    new:
+      sign_up: "Create my account"
+      h1: "Sign Up"
+  flash:
+    shared_error:
+      the_form: "The form contains"
+      e: "error"
+    session_controller:
+      create: "Email or password is invalid"
+    users:
+      create:
+        success: "Welcome to the Sample App!"
+  sessions:
+    new:
+      login: "Log in"
+      signup: "Sign up now"
+      span: "Remember me on this computer"
+      newuser: "New user? "
+
