@@ -20,4 +20,22 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  base_title: "Framgia E-Learning"
+  project: "E-Learning"
+  layouts:
+    header:
+      home: "Home"
+      help: "Help"
+      setting: "Setting"
+      login: "Login"
+    footer:
+      about: "About"
+      contact: "Contact"
+  static_pages:
+    home:
+      sign_up_now: "Sign up now !"
+      welcome: "Welcome to the E-Learning"
+
+    help:
+      email: "learning@gmail.com"
+      help: "Help"
