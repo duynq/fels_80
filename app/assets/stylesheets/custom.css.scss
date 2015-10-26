@@ -97,3 +97,51 @@ input {
   width: auto;
   margin-left: 0;
 }
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+.stats {
+  overflow: auto;
+  margin-top: 10px;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_name{
+  text-align: left;
+  margin-left: 10px;
+  resize: vertical
+}
+
+.col-md-8{
+  border-left: 1px solid #cccccc;
+}
+h3{
+  text-align: center;
+}
+.activity_title{
+  color: #3A54D8;
+  font-weight: bold;
+}
