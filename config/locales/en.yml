@@ -32,6 +32,7 @@ en:
       setting: "Setting"
       logout: "Logout"
       account: "Account"
+      users: "Users"
     footer:
       about: "About"
       contact: "Contact"
@@ -47,6 +48,12 @@ en:
     new:
       sign_up: "Create my account"
       h1: "Sign Up"
+    index:
+      h1: "All users"
+    destroy:
+      success: " All users have updated"
+      confirm: "You sure?"
+      detele: "delete"
   flash:
     shared_error:
       the_form: "The form contains"
