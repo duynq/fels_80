@@ -27,6 +27,8 @@ en:
     new:
       sign_up: "Create my account"
       h1: "Sign Up"
+      confirm: "Confirmation"
+      button_text: "Submit"
     index:
       h1: "All users"
     destroy:
@@ -37,6 +39,14 @@ en:
       following: "Following"
       follower: "Followers"
       activity: "Activity"
+    edit:
+      update: "Update"
+      edit_user: "Edit User"
+      update_profile: "Update your profile"
+      change_avatar: "Change Avatar"
+    update:
+      update_success: "Profile Updated"
+      update_fails: "Update Fails"
   flash:
     shared_error:
       the_form: "The form contains"
