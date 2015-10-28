@@ -49,6 +49,10 @@ en:
       update_success: "Profile Updated"
       update_fails: "Update Fails"
     infor: "view my profile"
+    followers:
+      followers_title: "Followers"
+    following:
+      following_title: "Following"
   flash:
     shared_error:
       the_form: "The form contains"
@@ -77,3 +81,9 @@ en:
       notlearned: "Not learned"
       all: "All"
       filter: "Filter"
+  relations:
+    follow: "Follow"
+    unfollow: "Unfollow"
+
+  following: "Following"
+  followers: "Followers"
