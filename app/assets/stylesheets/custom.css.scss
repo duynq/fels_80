@@ -97,7 +97,6 @@ input {
   width: auto;
   margin-left: 0;
 }
-
 .gravatar {
   float: left;
   margin-right: 10px;
@@ -148,4 +147,32 @@ h3{
 .gravatar_edit{
   margin: 10px;
   padding: 0;
+}
+.wordlist{
+  margin-left: 350px;
+  margin-bottom: 30px;
+  input {
+  width:auto !important;
+  margin-left: 50px;
+  }
+  label{
+    margin-left: 20px;
+  }
+}
+.button {
+  margin-top: 20px;
+  padding-left: 120px;
+}
+.start {
+  margin-top:20px;
+  float:right;
+}
+.cate {
+  margin-top: 30px;
+  p {
+    height: 100px;
+    width: 100%;
+    overflow-y: auto;
+    float:left;
+  }
 }
