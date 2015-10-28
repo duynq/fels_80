@@ -1,0 +1,8 @@
+<li>
+  <%= t "content" %>: <%= word.content %>
+  <% word.answers.each do |answer| %>
+    <p>
+      <%= radio_button_tag word.id, answer.id %> <%= answer.content %>
+    </p>
+  <% end %>
+</li>
