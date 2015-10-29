@@ -35,7 +35,7 @@ module SessionsHelper
     @current_user = nil
   end
 
-  def redirect_back_or default 
+  def redirect_back_or default
     redirect_to session[:forwarding_url] || default
     session.delete :forwarding_url
   end
@@ -46,6 +46,15 @@ module SessionsHelper
 
   def admin_user
     redirect_to root_url unless current_user.admin?
+  end
+
+  private
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = t "flash.session_helper.login"
+      redirect_to login_url
+    end
   end
 end
 

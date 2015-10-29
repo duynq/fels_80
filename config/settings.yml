@@ -1,1 +1,15 @@
 gravatar_size: 60
+number_word_in_lessons: 20
+number_answers: 4
+activity:
+  follow: "follow"
+  unfollow: "unfollow"
+  learned: "learned"
+  learning: "learning"
+option:
+  - all_word
+  - learned
+  - no_learn
+follow_methods:
+  - following
+  - followers

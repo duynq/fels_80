@@ -19,7 +19,8 @@ en:
     home:
       sign_up_now: "Sign up now !"
       welcome: "Welcome to the E-Learning"
-
+      word: "Words"
+      lesson: "Lesson"
     help:
       email: "learning@gmail.com"
       help: "Help"
@@ -47,6 +48,7 @@ en:
     update:
       update_success: "Profile Updated"
       update_fails: "Update Fails"
+    infor: "view my profile"
   flash:
     shared_error:
       the_form: "The form contains"
@@ -56,9 +58,22 @@ en:
     users:
       create:
         success: "Welcome to the Sample App!"
+    session_helper:
+      login: "Please log in"
   sessions:
     new:
       login: "Log in"
       signup: "Sign up now"
       span: "Remember me on this computer"
       newuser: "New user? "
+  categories:
+    index:
+      lesson: "Lesson"
+      start: "Start"
+  words:
+    index:
+      category: "Categories"
+      learned: "Learned"
+      notlearned: "Not learned"
+      all: "All"
+      filter: "Filter"
