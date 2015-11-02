@@ -1,6 +1,11 @@
 <div class="users" >
-  <%= link_to user.name, user %>
-  <%= user.email %>
+
+  <section class="user_info">
+    <div>
+      <%= gravatar_for user, size: Settings.gravatar_size %>
+      <h1 class="user_name"> <%= link_to user.name, user %></h1>
+    </div>
+  </section>
   <% if current_user.admin? && !current_user?(user) %>|
     <%= link_to t("users.destroy.delete"), user, method: :delete,
     data: { confirm: t("users.destroy.confirm") } %>
