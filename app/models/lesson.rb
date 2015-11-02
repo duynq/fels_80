@@ -1,4 +1,6 @@
 class Lesson < ActiveRecord::Base
+  include ActivityLogs
+
   belongs_to :category
   belongs_to :user
   has_many :results
@@ -7,11 +9,15 @@ class Lesson < ActiveRecord::Base
   accepts_nested_attributes_for :lesson_words
 
   before_create :init_lessons
-
   scope :lesson, -> user_id{where("user_id = ?",user_id).last}
+  after_create :save_activity
 
   private
   def init_lessons
     self.words = self.category.words.order("RANDOM()").limit Settings.number_word_in_lessons
+  end
+
+  def save_activity
+    create_activity user_id, id, Settings.activities.learned
   end
 end

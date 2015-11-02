@@ -1,10 +1,6 @@
 class LessonsController < ApplicationController
   before_action :logged_in_user
 
-  def index
-    @lessons = Lesson.all
-  end
-
   def create
     @lesson = current_user.lessons.create lesson_params
     if @lesson.save
