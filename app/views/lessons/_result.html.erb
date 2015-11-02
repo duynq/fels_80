@@ -1,0 +1,18 @@
+<% @true_answer = 0 %>
+<% @lesson.lesson_words.each do |lessonwords| %>
+  <li>
+    <%= lessonwords.word.name %>|
+    <% if lessonwords.answer.nil? %>
+      <%= t "lessons.update.noanswer" %>|
+      <%= render "trueanswer", lessonwords: lessonwords %>
+    <% else %>
+      <%= t "lessons.update.youranswer" %>: <%= lessonwords.answer.content %>|
+      <%= lessonwords.answer.is_correct ? render("count", true_answer: @true_answer) : render("trueanswer", lessonwords: lessonwords) %>
+    <% end %>
+  </li>
+<% end %>
+<li>
+  <%= t "lessons.update.number" %>
+  <%= @true_answer %>
+  <%= t "lessons.update.correct" %>
+</li>

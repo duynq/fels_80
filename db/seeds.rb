@@ -9,6 +9,9 @@ User.create!(name: "quang duy",
              email: "quangduyx188@gmail.com",
              password: "123456",
              admin: true)
+User.create!(name: "duy",
+             email: "nguyenduyx188@gmail.com",
+             password: "111111")
 99.times do |n|
   name = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
@@ -17,9 +20,7 @@ User.create!(name: "quang duy",
                email: email,
                password: password)
 end
-Category.create!(name: "Basic 500",
-                 description: "afadsfasdfa fewrcescfadfcadxad",
-                 created_at: Time.zone.now)
+
 10.times do |n|
   name = Faker::Name.first_name
   description = Faker::Lorem.sentence
@@ -27,13 +28,22 @@ Category.create!(name: "Basic 500",
                  description: description,
                  created_at: Time.zone.now)
 end
-Word.create!(name: "Hello",
-             mean: "Xin chào",
-             category_id: 1)
-50.times do |n|
-  name = Faker::Name.first_name
+30.times do |n|
+  name = "Word_#{n}"
   mean = Faker::Name.last_name
   Word.create!(name: name,
-             mean: mean,
-             category_id: 1)
+               mean: mean,
+               category_id: 1,
+               created_at: Time.zone.now,
+               updated_at: Time.zone.now)
+
+  4.times do |m|
+    name = "Answer_#{m}"
+    Answer.create!(content: name,
+                   is_correct: m == 0 ? 1 : 0,
+                   word_id: n,
+                   created_at: Time.zone.now,
+                   updated_at: Time.zone.now)
+  end
 end
+

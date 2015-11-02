@@ -7,5 +7,4 @@ class Category < ActiveRecord::Base
     uniqueness: {case_sensitive: false}
   validates :description, presence:true, length: {maximum: 100},
     uniqueness: {case_sensitive: false}
-
 end

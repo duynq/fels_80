@@ -1,0 +1,4 @@
+<%= t "lessons.update.answer" %>
+<% lessonwords.word.answers.each do |answer| %>
+  <%= answer.content if answer.is_correct %>
+<% end %>
