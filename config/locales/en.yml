@@ -85,7 +85,7 @@ en:
       confirm: "Do you want to delete?"
     new:
       new_category: "New Category"
-
+      learned: "you have learned: "
   words:
     index:
       category: "Categories"
@@ -106,3 +106,18 @@ en:
   user: "Users"
   description: "Description"
   tool: "Edit | Delete"
+  lessons:
+    index:
+      success: "Lesson have created!"
+      fails: "Fails to create a new Lesson"
+      answer: "Answer"
+    update:
+      success: "Lesson have update"
+      fails: "Fail to update lessons"
+      noanswer: "No answer"
+      answer: "your answer"
+      true: "Answer correct"
+      false: "Answer wrong"
+      number: "You had "
+      correct: "correct answer"
+      answer: "The correct number is"
