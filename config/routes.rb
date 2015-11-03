@@ -12,4 +12,9 @@ Rails.application.routes.draw do
   resources :categories
   resources :words
   resources :relationships
+
+  namespace :admin do
+    root "categories#index"
+    resources :categories
+  end
 end

@@ -64,6 +64,9 @@ en:
         success: "Welcome to the Sample App!"
     session_helper:
       login: "Please log in"
+    create_success: "Create Successed"
+    delete: "Deleted !"
+    update: "Update Success"
   sessions:
     new:
       login: "Log in"
@@ -74,6 +77,15 @@ en:
     index:
       lesson: "Lesson"
       start: "Start"
+    edit:
+      edit: "Edit"
+      edit_category: "Edit Category"
+    destroy:
+      delete: "Delete"
+      confirm: "Do you want to delete?"
+    new:
+      new_category: "New Category"
+
   words:
     index:
       category: "Categories"
@@ -87,3 +99,10 @@ en:
 
   following: "Following"
   followers: "Followers"
+  button: "Submit"
+  admin: "Admin"
+  category: "Categories"
+  word: "Words"
+  user: "Users"
+  description: "Description"
+  tool: "Edit | Delete"
