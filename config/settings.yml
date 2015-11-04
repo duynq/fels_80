@@ -16,3 +16,10 @@ gravatar_size: 50
 gravatar_size_large: 60
 lessons:
   success: "Lessons have create"
+activities:
+  followed: followed
+  unfollowed: unfollowed
+  learned: learned
+  a_lesson_in: a lesson in
+paginate_per_page: 10
+time: time_ago_in_words

@@ -121,3 +121,8 @@ en:
       number: "You had "
       correct: "correct answer"
       answer: "The correct number is"
+  ago: "ago."
+  wait: "Please Wait..."
+  time:
+    formats:
+      create_date: "%d-%m-%Y %H:%M:%S"
