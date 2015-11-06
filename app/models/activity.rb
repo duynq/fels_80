@@ -1,11 +1,8 @@
 class Activity < ActiveRecord::Base
   belongs_to :user
 
-  following_ids = "SELECT followed_id from relationships where
-    followed_id = :user_id"
   scope :recent, ->{order "created_at DESC"}
-  scope :followed, ->user{where " user_id IN (#{following_ids}) OR
-    user_id = ?",user.id}
+  scope :feed_all, ->(following_ids, user){where "user_id IN (?) OR user_id = ?", following_ids, user.id}
 
   validates :user_id, presence: true
   validates :target_id, presence: true

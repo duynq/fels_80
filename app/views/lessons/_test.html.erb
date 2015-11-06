@@ -1,3 +1,10 @@
+<h3 class="pull-right text-danger">
+  <span id="hidden-data" data-time-over-msg="<%= t "lessons.show.time_over" %>"
+    data-time-remaining="<%= @time_remaining %>">
+  </span>
+  <span class="glyphicon glyphicon-time">&nbsp</span>
+  <b id="time-remaining"></b>
+</h3>
 <div class="row" >
   <%= form_for @lesson do |f| %>
     <%= f.hidden_field :learned, value: true %>
@@ -7,3 +14,4 @@
     <%= f.submit t("lessons.index.answer"), class: "btn btn-primary" %>
   <% end %>
 </div>
+<%= javascript_include_tag "lesson_timer", "data-turbolinks-track": true %>

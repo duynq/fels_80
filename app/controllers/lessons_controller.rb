@@ -14,6 +14,8 @@ class LessonsController < ApplicationController
 
   def show
     @lesson = Lesson.lesson(current_user.id)
+    @time_remaining = @lesson.time_remaining
+    @is_time_over = @time_remaining < 0
   end
 
   def update
