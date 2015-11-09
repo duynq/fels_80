@@ -18,5 +18,8 @@
     <h3 class="activity_title">
       <%= "#{t "users.show.activity"} (#{@user.activities.count})" %>
     </h3>
+    <div>
+      <%= render "shared/feed" if @user.activities.any? %>
+    </div>
   </div>
 </div>

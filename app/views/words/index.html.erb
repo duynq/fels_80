@@ -3,7 +3,7 @@
     <%= select_tag :category_id,
       options_from_collection_for_select(@categories, :id, :name,
       params[:category_id]),
-      include_blank: t("word.all"), class: "form-control" %>
+      include_blank: t("word"), class: "form-control" %>
   </p>
   <% Settings.option.each do |option| %>
     <p>

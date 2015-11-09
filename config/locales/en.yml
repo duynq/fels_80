@@ -129,6 +129,8 @@ en:
       number: "You had "
       correct: "correct answer"
       answer: "The correct number is"
+    show:
+      time_over: "Time over"
   ago: "ago."
   wait: "Please Wait..."
   time:
@@ -138,3 +140,4 @@ en:
   mean_correct: "Mean"
   name: "name"
   add_answer: "Add Answer"
+  word: "All"
