@@ -12,6 +12,9 @@ en:
       logout: "Logout"
       account: "Account"
       users: "Users"
+      manage: "Manage"
+      categories: "Categories"
+      words: "Words"
     footer:
       about: "About"
       contact: "Contact"
@@ -36,6 +39,7 @@ en:
       success: " All users have updated"
       confirm: "You sure?"
       detele: "delete"
+      fails: "Delete Fails"
     show:
       following: "Following"
       follower: "Followers"
