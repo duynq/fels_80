@@ -5,10 +5,10 @@
       params[:category_id]),
       include_blank: t("word"), class: "form-control" %>
   </p>
-  <% Settings.option.each do |option| %>
+  <% Settings.option.each_with_index do |option, index| %>
     <p>
       <%= radio_button_tag :option, option,
-        (checked = true if params[:option] == option) %>
+        (checked = true if params[:option] == option || params[:option].nil? && index == 0) %>
       <%= t "word.#{option}" %>
     </p>
     <p>
@@ -17,9 +17,23 @@
 <% end %>
 
 <% if @words.any? %>
-  <% @words.each do |word| %>
-    <div>
-      <%= word.name %>
-    </div>
-  <% end %>
+  <b>
+    <%= t "has" %>
+    <%= @words.count %>
+    <%= t "number" %>
+  </b>
+  <div class="row">
+    <% @words.each do |word| %>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-5">
+            <b><%= word.name %></b>
+          </div>
+          <div class="col-md-6 col-md-offset-1">
+            <%= render "answer", word: word %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 <% end %>
