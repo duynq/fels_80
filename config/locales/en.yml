@@ -145,3 +145,5 @@ en:
   name: "name"
   add_answer: "Add Answer"
   word: "All"
+  has: "Has: "
+  number: "numbers."

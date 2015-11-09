@@ -1,8 +1,9 @@
-<div class="field" >
-  <%= f.object.word.name %>
-  <br>
-  <% f.object.word.answers.each do |answer| %>
+<div class="panel panel-default">
+  <div class="panel-heading"><%= f.object.word.name %></div>
+  <div class="panel-body">
+    <% f.object.word.answers.each do |answer| %>
     <%= answer.content %>
     <%= f.radio_button :answer_id, answer.id %>
   <% end %>
+  </div>
 </div>
