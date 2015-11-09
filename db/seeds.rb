@@ -29,14 +29,19 @@ end
                  created_at: Time.zone.now)
 end
 
-50.times do |n|
-  name = Faker::Name.first_name
-  word = Word.create!(name: name,category_id: 1)
-  word_id = word.id
-  answer_correct = Faker::Lorem.word
-  Answer.create!(content: answer_correct, is_correct: true, word_id: word_id)
-  3.times do |t|
-    answer_incorrect = Faker::Lorem.word
-    Answer.create!(content: answer_incorrect, is_correct: false, word_id: word_id)
+30.times do |n|
+  name = "Word_#{n}"
+  Word.create!(name: name,
+               category_id: 1,
+               created_at: Time.zone.now,
+               updated_at: Time.zone.now)
+
+  4.times do |m|
+    name = "Answer_#{m}"
+    Answer.create!(content: name,
+                   is_correct: m == 0 ? 1 : 0,
+                   word_id: n,
+                   created_at: Time.zone.now,
+                   updated_at: Time.zone.now)
   end
 end
