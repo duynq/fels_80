@@ -93,6 +93,14 @@ en:
       notlearned: "Not learned"
       all: "All"
       filter: "Filter"
+    edit: "Edit"
+    delete: "Delete"
+    confirm: "Do you want to delete?"
+    new_word: "New Word"
+    create_success: "Create Successed"
+    create_fails: "Create Fails"
+    update_fails: "Update Fails"
+    delete_fails: "Delete Fails"
   relations:
     follow: "Follow"
     unfollow: "Unfollow"
@@ -126,3 +134,7 @@ en:
   time:
     formats:
       create_date: "%d-%m-%Y %H:%M:%S"
+  new_word: "New Word"
+  mean_correct: "Mean"
+  name: "name"
+  add_answer: "Add Answer"

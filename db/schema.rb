@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(version: 20151103022207) do
   add_index "activities", ["user_id"], name: "index_activities_on_user_id"
 
   create_table "answers", force: :cascade do |t|
+    t.integer  "word_id"
     t.string   "content"
     t.boolean  "is_correct"
-    t.integer  "word_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -104,7 +104,6 @@ ActiveRecord::Schema.define(version: 20151103022207) do
 
   create_table "words", force: :cascade do |t|
     t.string   "name"
-    t.string   "mean"
     t.integer  "category_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

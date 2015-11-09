@@ -1,0 +1,38 @@
+<% provide :title, t("word") %>
+<div>
+  <div class="row">
+    <div class="col-md=8">
+      <%= link_to t("new_word"), new_admin_word_path , class: "btn btn-primary" %>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th><%= t "word" %></th>
+            <th><%= t "category" %></th>
+            <th><%= t "mean_correct" %></th>
+            <th><%= t "tool" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @words.each do |word| %>
+            <tr id="word-<%= word.id %>">
+              <td><%= word.name %></td>
+              <td><%= word.category.name %></td>
+              <td>
+                <% word.answers.each do |answer| %>
+                  <%= answer.content if answer.is_correct %>
+                <% end %>
+              </td>
+              </td>
+              <td>
+                <%= link_to t("words.edit"), edit_admin_word_path(word) %>
+                <%= link_to t("words.delete"), admin_word_path(word), method: :delete,
+                  data: {confirm: t("words.confirm")}, class: "delete_category" %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <%= will_paginate @words %>
+    </div>
+  </div>
+</div>
