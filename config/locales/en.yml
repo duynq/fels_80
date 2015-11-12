@@ -123,6 +123,7 @@ en:
       success: "Lesson have created!"
       fails: "Fails to create a new Lesson"
       answer: "Answer"
+      noenough: "Has not enough word to make a lesson"
     update:
       success: "Lesson have update"
       fails: "Fail to update lessons"
@@ -147,3 +148,4 @@ en:
   word: "All"
   has: "Has: "
   number: "numbers."
+  notword: "not enough word or not learned"

@@ -22,8 +22,9 @@ activities:
   learned: learned
   a_lesson_in: have had a lesson in
   learning: is learning
+  cant: has not enough words to start the lesson
 paginate_per_page: 10
 time: time_ago_in_words
 page_per: 15
 lesson:
-  duration_in_minutes: 5
+  duration_in_minutes: 2

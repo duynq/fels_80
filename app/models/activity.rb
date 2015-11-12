@@ -3,6 +3,7 @@ class Activity < ActiveRecord::Base
 
   scope :recent, ->{order "created_at DESC"}
   scope :feed_all, ->(following_ids, user){where "user_id IN (?) OR user_id = ?", following_ids, user.id}
+  scope :target, ->target_id{where "target_id = ?",target_id }
 
   validates :user_id, presence: true
   validates :target_id, presence: true
