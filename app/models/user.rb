@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  include ActivityLogs
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
@@ -18,8 +19,9 @@ class User < ActiveRecord::Base
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   validates :password, presence: true, length: {minimum: 6}, allow_nil: true
 
-
   before_save :email_downcase
+  before_destroy :delete_activity
+
   has_secure_password
 
   def self.digest string
@@ -60,5 +62,9 @@ class User < ActiveRecord::Base
 
   def email_downcase
     self.email = email.downcase
+  end
+
+  def delete_activity
+    detete_activity self.id
   end
 end

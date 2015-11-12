@@ -13,7 +13,7 @@ class LessonsController < ApplicationController
   end
 
   def show
-    @lesson = Lesson.lesson(current_user.id)
+    @lesson = Lesson.find_by id: params[:id]
     @time_remaining = @lesson.time_remaining
     @is_time_over = @time_remaining < 0
   end

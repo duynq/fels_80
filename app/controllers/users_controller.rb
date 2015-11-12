@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
-
   before_action :load_user, only: [:show, :edit, :update]
-
   def index
     @users = User.paginate(page: params[:page],per_page: "20").order "name"
     respond_to do |format|
