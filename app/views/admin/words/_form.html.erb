@@ -1,6 +1,7 @@
 <%= form_for [:admin, @word] do |f| %>
 
-  <span class="alert_error"><%= t "alert_error" %></span>
+  <span class="alert_error" style="visibility: hidden" ><%= t "alert_error" %></span>
+  <br>
   <%= render "shared/error_messages", object: f.object %>
 
   <%= f.label :name %>
