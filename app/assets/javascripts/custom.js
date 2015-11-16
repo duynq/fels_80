@@ -24,4 +24,27 @@ $(function(){
       });
     }
   });
+
+  $(document).on("click", ".submit-word", function(){
+    var validate_field = false;
+    var validate_checkbox = false;
+    $(".content-answer").each(function(){
+      if(this.value != ""){
+        validate_field = true;
+      }
+    });
+    $(".checkbox").each(function(){
+      if(this.checked){
+        validate_checkbox = true;
+        if($(this).parent().parent().find(".content-answer")[0].value == ""){
+          validate_checkbox = false;
+        }
+      }
+    });
+
+    if(!validate_field || !validate_checkbox ){
+      alert($(".alert_error").text());
+      return false;
+    }
+  });
 });

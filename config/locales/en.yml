@@ -149,3 +149,4 @@ en:
   has: "Has: "
   number: "numbers."
   notword: "not enough word or not learned"
+  alert_error: "Error"
