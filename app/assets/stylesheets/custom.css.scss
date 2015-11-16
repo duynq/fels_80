@@ -208,7 +208,7 @@ h3{
 .activities {
   color: gray;
 }
-.submit{
+.submit-word{
   margin-top: 10px;
 }
 .add_answer{
@@ -219,4 +219,8 @@ h3{
   position: fixed;
   top: 40px;
   right: 30px;
+}
+
+.alert_error{
+  visibility: false;
 }
